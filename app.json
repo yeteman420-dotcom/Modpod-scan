@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "ModPod Scan",
+    "slug": "modpod-scan",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#080f0f"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.modpod.scan",
+      "infoPlist": {
+        "NSCameraUsageDescription": "ModPod Scan uses your camera to photograph your foot for custom mold and spacer placement analysis.",
+        "NSPhotoLibraryUsageDescription": "ModPod Scan can save your scan results to your photo library.",
+        "NSPhotoLibraryAddUsageDescription": "ModPod Scan saves scan results to your photo library."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#080f0f"
+      },
+      "package": "com.modpod.scan",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "ModPod Scan uses your camera to photograph your foot for AI-powered analysis."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "ModPod Scan accesses your photos to analyze foot images."
+        }
+      ]
+    ]
+  }
+}
